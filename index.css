@@ -1,0 +1,47 @@
+* {
+  box-sizing: content-box;
+}
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(13, 13, 21);
+}
+
+.loading-container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  transform: rotateY(70deg);
+  transform: rotateX(55deg);
+  position: absolute;
+  filter: drop-shadow(0px 2px 5px gray);
+  outline-style: solid;
+  outline-offset: 10px;
+  outline-width: 1px;
+}
+
+@keyframes anim {
+  0% {
+    top: 55vh;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    top: 40vh;
+    filter: hue-rotate(120deg);
+  }
+  100% {
+    top: 55vh;
+    filter: hue-rotate(0deg);
+  }
+}
